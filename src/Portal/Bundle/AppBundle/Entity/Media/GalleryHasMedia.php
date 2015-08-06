@@ -5,15 +5,14 @@ namespace Portal\Bundle\AppBundle\Entity\Media;
 use Sonata\MediaBundle\Entity\BaseGalleryHasMedia;
 
 /**
- * Class GalleryHasMedia
+ * Class GalleryHasMedia.
  *
- * @package Portal\Bundle\AppBundle\Entity\Media
  * @author  Quentin Somazzi <qsomazzi@gmail.com>
  */
 class GalleryHasMedia extends BaseGalleryHasMedia
 {
     /**
-     * @var int $id
+     * @var int
      */
     protected $id;
 

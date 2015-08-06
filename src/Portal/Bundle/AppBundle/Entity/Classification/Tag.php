@@ -5,22 +5,21 @@ namespace Portal\Bundle\AppBundle\Entity\Classification;
 use Sonata\ClassificationBundle\Entity\BaseTag;
 
 /**
- * Class Tag
+ * Class Tag.
  *
- * @package Portal\Bundle\AppBundle\Entity\Classification
  * @author  Quentin Somazzi <qsomazzi@gmail.com>
  */
 class Tag extends BaseTag
 {
     /**
-     * @var integer $id
+     * @var int
      */
     protected $id;
 
     /**
-     * Get id
+     * Get id.
      *
-     * @return integer $id
+     * @return int $id
      */
     public function getId()
     {

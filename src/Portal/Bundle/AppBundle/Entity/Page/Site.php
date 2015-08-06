@@ -5,15 +5,14 @@ namespace Portal\Bundle\AppBundle\Entity\Page;
 use Sonata\PageBundle\Entity\BaseSite;
 
 /**
- * Class Site
+ * Class Site.
  *
- * @package Portal\Bundle\AppBundle\Entity\Page
  * @author  Quentin Somazzi <qsomazzi@gmail.com>
  */
 class Site extends BaseSite
 {
     /**
-     * @var int $id
+     * @var int
      */
     protected $id;
 

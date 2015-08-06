@@ -7,6 +7,8 @@ help:
 	@echo "  clean      to remove and warmup cache"
 	@echo "  dev        to start Built-in web server of PHP"
 	@echo "  assets     to install assets"
+	@echo "  cs         to fix cs"
+	@echo "  cs_dry_run to check which cs to fix"
 
 install:
 	composer install
@@ -31,3 +33,9 @@ assets:
 
 assets-watch:
 	app/console assetic:dump --watch
+
+cs:
+	./bin/php-cs-fixer fix --verbose
+
+cs_dry_run:
+	./bin/php-cs-fixer fix --verbose --dry-run

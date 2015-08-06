@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "9c3309c690bab2aa8260ceb323ac89d6",
+    "hash": "6e93cf033345b8285b616ddc3f66e219",
     "packages": [
         {
             "name": "cocur/slugify",
@@ -2456,12 +2456,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataAdminBundle.git",
-                "reference": "652dd3f88c1ec9579fb59a32b972808184e4f017"
+                "reference": "a0801f1a9af944a2164530d4be43aade53ab6a64"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/652dd3f88c1ec9579fb59a32b972808184e4f017",
-                "reference": "652dd3f88c1ec9579fb59a32b972808184e4f017",
+                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/a0801f1a9af944a2164530d4be43aade53ab6a64",
+                "reference": "a0801f1a9af944a2164530d4be43aade53ab6a64",
                 "shasum": ""
             },
             "require": {
@@ -2481,7 +2481,6 @@
                 "symfony/http-foundation": "~2.3",
                 "symfony/property-access": "~2.3",
                 "symfony/routing": "~2.3",
-                "symfony/security-acl": "~2.3",
                 "symfony/security-bundle": "~2.3",
                 "symfony/translation": "~2.3",
                 "symfony/twig-bridge": "~2.3",
@@ -2494,12 +2493,14 @@
                 "sensio/generator-bundle": "~2.3",
                 "sonata-project/intl-bundle": "~2.1",
                 "symfony/phpunit-bridge": "~2.7|~3.0",
+                "symfony/security-acl": "~2.4",
                 "symfony/yaml": "~2.3"
             },
             "suggest": {
                 "jms/translation-bundle": "Extract message keys from Admins",
                 "sensio/generator-bundle": "Add sonata:admin:generate command",
-                "sonata-project/intl-bundle": "Add localized date and number into the list"
+                "sonata-project/intl-bundle": "Add localized date and number into the list",
+                "symfony/security-acl": "To make sonata working with Symfony >=2.8"
             },
             "type": "symfony-bundle",
             "extra": {
@@ -2535,7 +2536,7 @@
                 "bootstrap",
                 "sonata"
             ],
-            "time": "2015-08-04 13:59:41"
+            "time": "2015-08-06 09:23:51"
         },
         {
             "name": "sonata-project/block-bundle",
@@ -2739,12 +2740,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataClassificationBundle.git",
-                "reference": "edd5f24121455b5a91d801b1bd70a699a5d45e64"
+                "reference": "06a46292f2651fd5228ec85010944057c6c002d0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataClassificationBundle/zipball/edd5f24121455b5a91d801b1bd70a699a5d45e64",
-                "reference": "edd5f24121455b5a91d801b1bd70a699a5d45e64",
+                "url": "https://api.github.com/repos/sonata-project/SonataClassificationBundle/zipball/06a46292f2651fd5228ec85010944057c6c002d0",
+                "reference": "06a46292f2651fd5228ec85010944057c6c002d0",
                 "shasum": ""
             },
             "require": {
@@ -2797,7 +2798,7 @@
                 "tag",
                 "taxonomy"
             ],
-            "time": "2015-07-13 07:48:31"
+            "time": "2015-08-06 14:47:02"
         },
         {
             "name": "sonata-project/core-bundle",
@@ -2874,12 +2875,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataDatagridBundle.git",
-                "reference": "fec0147e99b3db467152d148126e2f894c9369a2"
+                "reference": "cc42f2801011d7ebc65edda451a2efa4b4d1fbb9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataDatagridBundle/zipball/fec0147e99b3db467152d148126e2f894c9369a2",
-                "reference": "fec0147e99b3db467152d148126e2f894c9369a2",
+                "url": "https://api.github.com/repos/sonata-project/SonataDatagridBundle/zipball/cc42f2801011d7ebc65edda451a2efa4b4d1fbb9",
+                "reference": "cc42f2801011d7ebc65edda451a2efa4b4d1fbb9",
                 "shasum": ""
             },
             "require": {
@@ -2923,7 +2924,7 @@
                 "datagrid",
                 "sonata"
             ],
-            "time": "2015-07-07 10:54:34"
+            "time": "2015-08-06 14:47:50"
         },
         {
             "name": "sonata-project/doctrine-extensions",
@@ -2980,12 +2981,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataDoctrineORMAdminBundle.git",
-                "reference": "2cd709777b571f7f7e294ad4575f38955e6da963"
+                "reference": "4fcec62fab9487c5479519f5d663c3d1d588a10f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataDoctrineORMAdminBundle/zipball/2cd709777b571f7f7e294ad4575f38955e6da963",
-                "reference": "2cd709777b571f7f7e294ad4575f38955e6da963",
+                "url": "https://api.github.com/repos/sonata-project/SonataDoctrineORMAdminBundle/zipball/4fcec62fab9487c5479519f5d663c3d1d588a10f",
+                "reference": "4fcec62fab9487c5479519f5d663c3d1d588a10f",
                 "shasum": ""
             },
             "require": {
@@ -3045,7 +3046,7 @@
                 "generator",
                 "sonata"
             ],
-            "time": "2015-07-07 10:56:05"
+            "time": "2015-08-06 14:48:30"
         },
         {
             "name": "sonata-project/easy-extends-bundle",
@@ -3173,12 +3174,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataFormatterBundle.git",
-                "reference": "0a3a911c12f0cc9772c7bf1bb17be98afb6ed114"
+                "reference": "b854ef71eabc0785fadca2d3dd6b477bf63ca4b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataFormatterBundle/zipball/0a3a911c12f0cc9772c7bf1bb17be98afb6ed114",
-                "reference": "0a3a911c12f0cc9772c7bf1bb17be98afb6ed114",
+                "url": "https://api.github.com/repos/sonata-project/SonataFormatterBundle/zipball/b854ef71eabc0785fadca2d3dd6b477bf63ca4b8",
+                "reference": "b854ef71eabc0785fadca2d3dd6b477bf63ca4b8",
                 "shasum": ""
             },
             "require": {
@@ -3231,7 +3232,7 @@
                 "markitup",
                 "sonata"
             ],
-            "time": "2015-07-07 10:55:47"
+            "time": "2015-08-06 14:49:55"
         },
         {
             "name": "sonata-project/google-authenticator",
@@ -3596,12 +3597,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataSeoBundle.git",
-                "reference": "9149d15b1ec2dd6871303a5156caff7b4b4157be"
+                "reference": "b7b1237228cf90c86ae0a4b4380506facb70982a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataSeoBundle/zipball/9149d15b1ec2dd6871303a5156caff7b4b4157be",
-                "reference": "9149d15b1ec2dd6871303a5156caff7b4b4157be",
+                "url": "https://api.github.com/repos/sonata-project/SonataSeoBundle/zipball/b7b1237228cf90c86ae0a4b4380506facb70982a",
+                "reference": "b7b1237228cf90c86ae0a4b4380506facb70982a",
                 "shasum": ""
             },
             "require": {
@@ -3656,7 +3657,7 @@
                 "seo",
                 "sonata"
             ],
-            "time": "2015-07-27 09:13:25"
+            "time": "2015-08-06 14:50:49"
         },
         {
             "name": "sonata-project/user-bundle",
@@ -3664,12 +3665,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataUserBundle.git",
-                "reference": "0779677f667a3377ef2a9722c5d126d23fb18604"
+                "reference": "ec09378a100dfe6285562e864c2286ef9104059e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataUserBundle/zipball/0779677f667a3377ef2a9722c5d126d23fb18604",
-                "reference": "0779677f667a3377ef2a9722c5d126d23fb18604",
+                "url": "https://api.github.com/repos/sonata-project/SonataUserBundle/zipball/ec09378a100dfe6285562e864c2286ef9104059e",
+                "reference": "ec09378a100dfe6285562e864c2286ef9104059e",
                 "shasum": ""
             },
             "require": {
@@ -3734,7 +3735,7 @@
                 "sonata",
                 "user"
             ],
-            "time": "2015-07-20 08:11:26"
+            "time": "2015-08-06 14:51:16"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -4468,6 +4469,60 @@
                 "instantiate"
             ],
             "time": "2015-06-14 21:17:01"
+        },
+        {
+            "name": "fabpot/php-cs-fixer",
+            "version": "v1.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfPHP/PHP-CS-Fixer.git",
+                "reference": "8e21b4fb32c4618a425817d9f0daf3d57a9808d1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/8e21b4fb32c4618a425817d9f0daf3d57a9808d1",
+                "reference": "8e21b4fb32c4618a425817d9f0daf3d57a9808d1",
+                "shasum": ""
+            },
+            "require": {
+                "ext-tokenizer": "*",
+                "php": ">=5.3.6",
+                "sebastian/diff": "~1.1",
+                "symfony/console": "~2.3",
+                "symfony/event-dispatcher": "~2.1",
+                "symfony/filesystem": "~2.1",
+                "symfony/finder": "~2.1",
+                "symfony/process": "~2.3",
+                "symfony/stopwatch": "~2.5"
+            },
+            "require-dev": {
+                "satooshi/php-coveralls": "0.7.*@dev"
+            },
+            "bin": [
+                "php-cs-fixer"
+            ],
+            "type": "application",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\CS\\": "Symfony/CS/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dariusz Rumiński",
+                    "email": "dariusz.ruminski@gmail.com"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "A tool to automatically fix PHP code style",
+            "time": "2015-07-27 20:56:10"
         },
         {
             "name": "phpdocumentor/reflection-docblock",

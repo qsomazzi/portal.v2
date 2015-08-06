@@ -1,11 +1,11 @@
 <?php
 
-require_once __DIR__.'/AppKernel.php';
+require_once __DIR__ . '/AppKernel.php';
 
 use Symfony\Bundle\FrameworkBundle\HttpCache\HttpCache;
 
 /**
- * Class AppCache
+ * Class AppCache.
  *
  * @author Quentin Somazzi <qsomazzi@gmail.com>
  */

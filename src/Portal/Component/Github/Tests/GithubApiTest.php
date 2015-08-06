@@ -6,9 +6,8 @@ use Github;
 use Portal\Component\Github\GithubApi;
 
 /**
- * Class GithubApiTest
+ * Class GithubApiTest.
  *
- * @package Portal\Component\Github
  * @author  Quentin Somazzi <qsomazzi@gmail.com>
  */
 class GithubApiTest extends \PHPUnit_Framework_TestCase

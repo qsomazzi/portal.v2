@@ -7,9 +7,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
- * Class DefaultController
+ * Class DefaultController.
  *
- * @package Portal\Bundle\AppBundle\Controller
  * @author  Quentin Somazzi <qsomazzi@gmail.com>
  */
 class DefaultController extends Controller
@@ -26,7 +25,9 @@ class DefaultController extends Controller
 
         $gists = $client->api('gists')->all();
 
-        echo "<pre>";\Doctrine\Common\Util\Debug::dump($gists);die();
+        echo '<pre>';
+        \Doctrine\Common\Util\Debug::dump($gists);
+        die();
 
         die('cool');
     }

@@ -5,22 +5,21 @@ namespace Portal\Bundle\AppBundle\Entity\Classification;
 use Sonata\ClassificationBundle\Entity\BaseContext;
 
 /**
- * Class Context
+ * Class Context.
  *
- * @package Portal\Bundle\AppBundle\Entity\Classification
  * @author  Quentin Somazzi <qsomazzi@gmail.com>
  */
 class Context extends BaseContext
 {
     /**
-     * @var integer $id
+     * @var int
      */
     protected $id;
 
     /**
-     * Get id
+     * Get id.
      *
-     * @return integer $id
+     * @return int $id
      */
     public function getId()
     {

@@ -5,15 +5,14 @@ namespace Portal\Bundle\AppBundle\Entity\Page;
 use Sonata\PageBundle\Entity\BaseBlock;
 
 /**
- * Class Block
+ * Class Block.
  *
- * @package Portal\Bundle\AppBundle\Entity\Page
  * @author  Quentin Somazzi <qsomazzi@gmail.com>
  */
 class Block extends BaseBlock
 {
     /**
-     * @var int $id
+     * @var int
      */
     protected $id;
 

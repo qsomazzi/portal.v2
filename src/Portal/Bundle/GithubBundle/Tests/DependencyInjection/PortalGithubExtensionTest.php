@@ -6,9 +6,8 @@ use Portal\Bundle\GithubBundle\DependencyInjection\PortalGithubExtension;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 
 /**
- * Class PortalGithubExtensionTest
+ * Class PortalGithubExtensionTest.
  *
- * @package Portal\Bundle\GithubBundle\Tests\DependencyInjection
  * @author  Quentin Somazzi <qsomazzi@gmail.com>
  */
 class PortalGithubExtensionTest extends \PHPUnit_Framework_TestCase
@@ -41,8 +40,8 @@ class PortalGithubExtensionTest extends \PHPUnit_Framework_TestCase
             [
                 'cache' => [
                     'dir' => '/tmp/github-api-cache-test',
-                ]
-            ]
+                ],
+            ],
         ];
 
         $builder = $this->getBuilder($config);

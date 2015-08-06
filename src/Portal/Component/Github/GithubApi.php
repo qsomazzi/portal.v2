@@ -5,9 +5,8 @@ namespace Portal\Component\Github;
 use Github;
 
 /**
- * Class GithubApi
+ * Class GithubApi.
  *
- * @package Portal\Component\Github
  * @author  Quentin Somazzi <qsomazzi@gmail.com>
  */
 class GithubApi
@@ -18,9 +17,9 @@ class GithubApi
     protected $cache = null;
 
     /**
-     * Constructor
+     * Constructor.
      *
-     * @param boolean|string $cacheDir
+     * @param bool|string $cacheDir
      */
     public function __construct($cacheDir = false)
     {
@@ -30,7 +29,7 @@ class GithubApi
     }
 
     /**
-     * Get a client object, so you can access to all GitHub
+     * Get a client object, so you can access to all GitHub.
      *
      * @return Github\Client
      */
@@ -40,7 +39,7 @@ class GithubApi
     }
 
     /**
-     * Get cache
+     * Get cache.
      *
      * @return null|Github\HttpClient\CachedHttpClient $cache
      */

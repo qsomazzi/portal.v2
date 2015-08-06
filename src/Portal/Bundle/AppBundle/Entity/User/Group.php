@@ -5,15 +5,14 @@ namespace Portal\Bundle\AppBundle\Entity\User;
 use Sonata\UserBundle\Entity\BaseGroup;
 
 /**
- * Class Group
+ * Class Group.
  *
- * @package Portal\Bundle\AppBundle\Entity\User
  * @author  Quentin Somazzi <qsomazzi@gmail.com>
  */
 class Group extends BaseGroup
 {
     /**
-     * @var integer
+     * @var int
      */
     protected $id;
 

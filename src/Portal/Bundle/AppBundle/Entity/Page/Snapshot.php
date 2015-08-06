@@ -5,9 +5,8 @@ namespace Portal\Bundle\AppBundle\Entity\Page;
 use Sonata\PageBundle\Entity\BaseSnapshot;
 
 /**
- * Class Snapshot
+ * Class Snapshot.
  *
- * @package Portal\Bundle\AppBundle\Entity\Page
  * @author  Quentin Somazzi <qsomazzi@gmail.com>
  */
 class Snapshot extends BaseSnapshot
@@ -20,7 +19,7 @@ class Snapshot extends BaseSnapshot
     /**
      * Get id.
      *
-     * @return integer $id
+     * @return int $id
      */
     public function getId()
     {
