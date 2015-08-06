@@ -1,0 +1,31 @@
+fos_user:
+    db_driver:        orm
+    firewall_name:    main
+    user_class:       Portal\Bundle\AppBundle\Entity\User\User
+
+    group:
+        group_class:  Portal\Bundle\AppBundle\Entity\User\Group
+
+    profile:
+        # Authentication Form
+        form:
+            type:    fos_user_profile
+            handler: fos_user.profile.form.handler.default
+            name:    fos_user_profile_form
+
+sonata_user:
+    class:
+        user:  Portal\Bundle\AppBundle\Entity\User\User
+        group: Portal\Bundle\AppBundle\Entity\User\Group
+
+    security_acl: false
+    manager_type: orm
+
+# Enable Doctrine to map the provided entities
+doctrine:
+    orm:
+        entity_managers:
+            default:
+                mappings:
+                    FOSUserBundle: ~
+                    SonataUserBundle: ~

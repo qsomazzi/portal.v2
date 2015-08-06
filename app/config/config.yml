@@ -1,0 +1,76 @@
+imports:
+    - { resource: parameters.yml }
+    - { resource: security.yml }
+    - { resource: assetic.yml }
+
+    - { resource: sonata/sonata_admin.yml }
+    - { resource: sonata/sonata_user.yml }
+    - { resource: sonata/sonata_block.yml }
+    - { resource: sonata/sonata_page.yml }
+    - { resource: sonata/sonata_notification.yml }
+    - { resource: sonata/sonata_formatter.yml }
+    - { resource: sonata/sonata_classification.yml }
+    - { resource: sonata/sonata_media.yml }
+
+framework:
+    translator:
+        fallback: fr
+    secret: "%secret%"
+    router:
+        resource: "%kernel.root_dir%/config/routing.yml"
+        strict_requirements: ~
+    form:            ~
+    csrf_protection: ~
+    validation:      { enable_annotations: true }
+    templating:
+        engines: ['twig']
+    default_locale:  "%locale%"
+    trusted_hosts:   ~
+    trusted_proxies: ~
+    session:
+        save_path: ~
+    fragments:       ~
+    http_method_override: true
+
+# Twig Configuration
+twig:
+    debug:            "%kernel.debug%"
+    strict_variables: "%kernel.debug%"
+
+    form:
+        resources:
+            - 'SonataFormatterBundle:Form:formatter.html.twig'
+            - 'SonataMediaBundle:Form:media_widgets.html.twig'
+            - 'SonataCoreBundle:Form:datepicker.html.twig'
+
+# Doctrine Configuration
+doctrine:
+    dbal:
+        driver:   pdo_mysql
+        host:     "%database_host%"
+        port:     "%database_port%"
+        dbname:   "%database_name%"
+        user:     "%database_user%"
+        password: "%database_password%"
+        charset:  UTF8
+        types:
+            json: Sonata\Doctrine\Types\JsonType
+
+    orm:
+        entity_managers:
+            default:
+                mappings:
+                    PortalAppBundle: ~
+
+# Swiftmailer Configuration
+swiftmailer:
+    transport: "%mailer_transport%"
+    host:      "%mailer_host%"
+    username:  "%mailer_user%"
+    password:  "%mailer_password%"
+    spool:     { type: memory }
+
+# Cache folder for github API
+portal_github:
+    cache:
+        dir: %kernel.root_dir%/cache/github

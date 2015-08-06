@@ -1,0 +1,14 @@
+sonata_classification:
+    class:
+        tag:        Portal\Bundle\AppBundle\Entity\Classification\Tag
+        category:   Portal\Bundle\AppBundle\Entity\Classification\Category
+        collection: Portal\Bundle\AppBundle\Entity\Classification\Collection
+        context:    Portal\Bundle\AppBundle\Entity\Classification\Context
+        media:      Portal\Bundle\AppBundle\Entity\Media\Media
+
+doctrine:
+    orm:
+        entity_managers:
+            default:
+                mappings:
+                    SonataClassificationBundle: ~
