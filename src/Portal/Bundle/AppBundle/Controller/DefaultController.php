@@ -2,6 +2,7 @@
 
 namespace Portal\Bundle\AppBundle\Controller;
 
+use Github\Client;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
@@ -19,6 +20,8 @@ class DefaultController extends Controller
     {
         $service = $this->container->get('github_api');
         $client  = $service->getClient();
+
+        $client->authenticate($this->container->getParameter('github_api.token'), Client::AUTH_HTTP_TOKEN);
 
         return $this->render('PortalAppBundle:Default:war_zone.html.twig', [
             'repositories' => $client->api('user')->repositories('qsomazzi'),

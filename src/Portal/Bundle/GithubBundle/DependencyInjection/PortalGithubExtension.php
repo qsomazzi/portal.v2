@@ -39,6 +39,7 @@ class PortalGithubExtension extends Extension
     public function registerParameters(ContainerBuilder $container, array $config)
     {
         $container->setParameter('github_api.cache_dir', $config['cache']);
+        $container->setParameter('github_api.token', $config['token']);
     }
 
     /**

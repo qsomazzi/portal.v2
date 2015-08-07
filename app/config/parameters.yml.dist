@@ -12,3 +12,5 @@ parameters:
     mailer_password:   ~
 
     secret:            1234PORTAL56789SYMFONY
+
+    github_token:      1234567890

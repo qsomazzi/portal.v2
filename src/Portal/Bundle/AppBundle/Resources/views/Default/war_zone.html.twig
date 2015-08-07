@@ -1,7 +1,7 @@
 <h2>Gists</h2>
 <ul>
     {% for gist in gists %}
-        <li>{{ gist.id }}</li>
+        <li>{{ gist.id }} - {{ gist.description }} ({{ gist.url }}) - {% if gist.public %}Public{% else %}Secret{% endif %}</li>
     {% endfor %}
 </ul>
 

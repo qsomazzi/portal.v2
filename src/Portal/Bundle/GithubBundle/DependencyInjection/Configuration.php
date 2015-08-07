@@ -21,6 +21,7 @@ class Configuration implements ConfigurationInterface
         $treeBuilder->root('portal_github')
             ->children()
                 ->scalarNode('cache')->defaultValue(false)->end()
+                ->scalarNode('token')->defaultValue(false)->end()
                 ->arrayNode('class')
                     ->addDefaultsIfNotSet()
                     ->children()

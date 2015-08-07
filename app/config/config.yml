@@ -75,3 +75,4 @@ swiftmailer:
 # Cache folder for github API
 portal_github:
     cache: %kernel.root_dir%/cache/github
+    token: %github_token%
