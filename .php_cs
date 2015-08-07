@@ -2,12 +2,12 @@
 
 $finder = Symfony\CS\Finder\DefaultFinder::create()
     ->in(array(__DIR__))
-    ->exclude(array('Tests/Fixtures'))
+    ->exclude(['Tests/Fixtures', 'app/cache'])
 ;
 
 return Symfony\CS\Config\Config::create()
     ->level(Symfony\CS\FixerInterface::SYMFONY_LEVEL)
-    ->fixers(array(
+    ->fixers([
         '-unalign_double_arrow',
         '-unalign_equals',
         'align_double_arrow',
@@ -16,7 +16,7 @@ return Symfony\CS\Config\Config::create()
         'concat_with_spaces',
         'phpdoc_order',
         'short_array_syntax',
-    ))
+    ])
     ->setUsingCache(true)
     ->finder($finder)
 ;

@@ -61,6 +61,7 @@ doctrine:
             default:
                 mappings:
                     PortalAppBundle: ~
+                    PortalGithubBundle: ~
 
 # Swiftmailer Configuration
 swiftmailer:
@@ -72,5 +73,4 @@ swiftmailer:
 
 # Cache folder for github API
 portal_github:
-    cache:
-        dir: %kernel.root_dir%/cache/github
+    cache: %kernel.root_dir%/cache/github
