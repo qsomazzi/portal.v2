@@ -44,7 +44,7 @@
     "require-dev": {
         "sensio/generator-bundle": "~2.3",
         "phpunit/phpunit": "~4.0",
-        "fabpot/php-cs-fixer": "~0.5|~1.0"
+        "fabpot/php-cs-fixer": "~1.0"
     },
     "scripts": {
         "post-root-package-install": [

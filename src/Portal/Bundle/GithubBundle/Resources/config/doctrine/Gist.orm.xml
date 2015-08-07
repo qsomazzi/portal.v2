@@ -5,13 +5,16 @@
                   http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
 
     <entity name="Portal\Bundle\GithubBundle\Entity\Gist"
-            table="github__gist"
-            repository-class="Doctrine\ORM\EntityRepository">
+            table="github__gist">
         <id name="id" type="string" column="id">
             <generator strategy="NONE"/>
         </id>
 
-        <field name="url"         type="string" column="url"         length="255" />
-        <field name="description" type="string" column="description" length="255" />
+        <field name="description" type="string"  column="description" length="255" />
+        <field name="public"      type="boolean" column="public" >
+            <options>
+                <option name="default">1</option>
+            </options>
+        </field>
     </entity>
 </doctrine-mapping>

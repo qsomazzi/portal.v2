@@ -3,6 +3,9 @@
 namespace Portal\Component\Github;
 
 use Github;
+use Github\Api\CurrentUser;
+use Github\Api\Gists;
+use Github\Client;
 
 /**
  * Class GithubApi.
@@ -20,22 +23,27 @@ class GithubApi
      * Constructor.
      *
      * @param bool|string $cacheDir
+     * @param bool|string $userToken
      */
-    public function __construct($cacheDir = false)
+    public function __construct($cacheDir = false, $userToken = false)
     {
         if ($cacheDir) {
             $this->cache = new Github\HttpClient\CachedHttpClient(['cache_dir' => $cacheDir]);
+        }
+
+        if ($userToken) {
+            $this->getClient()->authenticate($userToken, Client::AUTH_HTTP_TOKEN);
         }
     }
 
     /**
      * Get a client object, so you can access to all GitHub.
      *
-     * @return Github\Client
+     * @return Client
      */
     public function getClient()
     {
-        return new Github\Client($this->cache);
+        return new Client($this->cache);
     }
 
     /**
@@ -46,5 +54,27 @@ class GithubApi
     public function getCache()
     {
         return $this->cache;
+    }
+
+    /**
+     * @return array
+     */
+    public function getGists()
+    {
+        /** @var Gists $gistClient */
+        $gistClient = $this->getClient()->api('gists');
+
+        return $gistClient->all();
+    }
+
+    /**
+     * @return array
+     */
+    public function getRepositories()
+    {
+        /** @var CurrentUser $repoClient */
+        $repoClient = $this->getClient()->api('me');
+
+        return $repoClient->repositories();
     }
 }

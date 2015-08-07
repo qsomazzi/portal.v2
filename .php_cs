@@ -1,8 +1,8 @@
 <?php
 
 $finder = Symfony\CS\Finder\DefaultFinder::create()
-    ->in(array(__DIR__))
-    ->exclude(['Tests/Fixtures', 'app/cache'])
+    ->in([__DIR__])
+    ->exclude(['app/cache'])
 ;
 
 return Symfony\CS\Config\Config::create()

@@ -1,17 +1,14 @@
-<?xml version="1.0" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 
 <container xmlns="http://symfony.com/schema/dic/services"
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
-    <parameters>
-        <parameter key="github_api.class">Portal\Component\Github\GithubApi</parameter>
-    </parameters>
-
     <services>
-        <service id="github_api" class="%github_api.class%">
-            <argument>%github_api.cache_dir%</argument>
-            <argument>%github_api.token%</argument>
+        <service id="portal.github.manager.gist" class="Portal\Bundle\GithubBundle\Entity\GistManager">
+            <argument>Portal\Bundle\GithubBundle\Entity\Gist</argument>
+            <argument type="service" id="doctrine" />
         </service>
     </services>
+
 </container>
