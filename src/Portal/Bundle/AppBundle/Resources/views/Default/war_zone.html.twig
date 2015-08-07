@@ -1,0 +1,13 @@
+<h2>Gists</h2>
+<ul>
+    {% for gist in gists %}
+        <li>{{ gist.id }}</li>
+    {% endfor %}
+</ul>
+
+<h2>Repositories</h2>
+<ul>
+    {% for repository in repositories %}
+        <li>{{ repository.id }}</li>
+    {% endfor %}
+</ul>

@@ -11,4 +11,4 @@ parameters:
     mailer_user:       ~
     mailer_password:   ~
 
-    secret:            ThisTokenIsNotSoSecretChangeIt
+    secret:            1234PORTAL56789SYMFONY

@@ -13,5 +13,4 @@
             <argument>%github_api.cache_dir%</argument>
         </service>
     </services>
-
 </container>

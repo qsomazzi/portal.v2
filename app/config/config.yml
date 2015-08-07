@@ -28,6 +28,7 @@ framework:
     trusted_hosts:   ~
     trusted_proxies: ~
     session:
+        name:      portal_session
         save_path: ~
     fragments:       ~
     http_method_override: true
