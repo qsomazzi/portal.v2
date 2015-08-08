@@ -1,0 +1,35 @@
+{% extends 'SonataDoctrineORMAdminBundle:Form:form_admin_fields.html.twig' %}
+
+{% block color_widget %}
+    {{ block('choice_widget') }}
+
+    {% spaceless %}
+        <script>
+            (function ($) {
+                var select2FormatColorSelect = function format(state) {
+                    if (!state.id) {
+                        return state.text;
+                    }
+                    return ' <i class="fa fa-square" style="color: '+ state.id +'"></i> ' + state.text;
+                };
+                $('select.color-selection-choice').select2({
+                    formatResult: select2FormatColorSelect,
+                    formatSelection: select2FormatColorSelect,
+                    escapeMarkup: function(m) { return m; }
+                });
+            })(jQuery);
+        </script>
+    {% endspaceless %}
+{% endblock color_widget %}
+
+{% block iconpicker_widget %}
+    <button class="btn btn-default iconPicker" name="{{ full_name }}" id="{{ id }}" data-icon="{{ data }}" {{ block('widget_container_attributes') }} data-iconset="fontawesome" role="iconpicker"></button>
+
+    {% spaceless %}
+        <script>
+            (function ($) {
+                $('#{{ id }}').iconpicker();
+            })(jQuery);
+        </script>
+    {% endspaceless %}
+{% endblock iconpicker_widget %}

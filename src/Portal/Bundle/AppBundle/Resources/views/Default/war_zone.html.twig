@@ -3,45 +3,38 @@
 <h2>Repositories</h2>
 <ul>
     <li>
-        Perso
+        Perso - public
         <ul>
-            <li>
-                Public
-                <ul>
-                    {% for repository in repositories if not repository.fork and not repository.private %}
-                        <li>{{ repository.id }} - <a href="{{ repository.url }}" target="_blank">{{ repository.name }}</a> ({{ repository.description }}) - <b>{{ repository.language }}</b></li>
-                    {% endfor %}
-                </ul>
-            </li>
-            <li>
-                Private
-                <ul>
-                    {% for repository in repositories if not repository.fork and repository.private %}
-                        <li>{{ repository.id }} - <a href="{{ repository.url }}" target="_blank">{{ repository.name }}</a> ({{ repository.description }}) - <b>{{ repository.language }}</b></li>
-                    {% endfor %}
-                </ul>
-            </li>
+            {% for repository in repositories if not repository.fork and not repository.private %}
+                <li>{{ repository.id }} - <a href="{{ repository.url }}" target="_blank">{{ repository.name }}</a> ({{ repository.description }}) - <b>{{ repository.language }}</b></li>
+            {% endfor %}
         </ul>
     </li>
+
     <li>
-        Forks
+        Perso - private
         <ul>
-            <li>
-                Public
-                <ul>
-                    {% for repository in repositories if repository.fork and not repository.private %}
-                        <li>{{ repository.id }} - <a href="{{ repository.url }}" target="_blank">{{ repository.name }}</a> ({{ repository.description }}) - <b>{{ repository.language }}</b></li>
-                    {% endfor %}
-                </ul>
-            </li>
-            <li>
-                Private
-                <ul>
-                    {% for repository in repositories if repository.fork and repository.private %}
-                        <li>{{ repository.id }} - <a href="{{ repository.url }}" target="_blank">{{ repository.name }}</a> ({{ repository.description }}) - <b>{{ repository.language }}</b></li>
-                    {% endfor %}
-                </ul>
-            </li>
+            {% for repository in repositories if not repository.fork and repository.private %}
+                <li>{{ repository.id }} - <a href="{{ repository.url }}" target="_blank">{{ repository.name }}</a> ({{ repository.description }}) - <b>{{ repository.language }}</b></li>
+            {% endfor %}
+        </ul>
+    </li>
+
+    <li>
+        Forks - public
+        <ul>
+            {% for repository in repositories if repository.fork and not repository.private %}
+                <li>{{ repository.id }} - <a href="{{ repository.url }}" target="_blank">{{ repository.name }}</a> ({{ repository.description }}) - <b>{{ repository.language }}</b></li>
+            {% endfor %}
+        </ul>
+    </li>
+
+    <li>
+        Forks - private
+        <ul>
+            {% for repository in repositories if repository.fork and repository.private %}
+                <li>{{ repository.id }} - <a href="{{ repository.url }}" target="_blank">{{ repository.name }}</a> ({{ repository.description }}) - <b>{{ repository.language }}</b></li>
+            {% endfor %}
         </ul>
     </li>
 </ul>

@@ -92,3 +92,17 @@ assetic:
             filters:
                 - cssrewrite
                 - yui_css
+
+        portal_js:
+            inputs:
+                - %kernel.root_dir%/../web/bundles/portalapp/vendor/bootstrap-iconpicker/bootstrap-iconpicker/js/iconset/iconset-fontawesome-4.2.0.min.js
+                - %kernel.root_dir%/../web/bundles/portalapp/vendor/bootstrap-iconpicker/bootstrap-iconpicker/js/bootstrap-iconpicker.min.js
+            filters:
+                - yui_js
+
+        portal_css:
+            inputs:
+                - %kernel.root_dir%/../web/bundles/portalapp/vendor/bootstrap-iconpicker/bootstrap-iconpicker/css/bootstrap-iconpicker.min.css
+            filters:
+                - cssrewrite
+                - yui_css

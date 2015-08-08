@@ -12,3 +12,5 @@
 /vendor/
 /bin/
 .php_cs.cache
+/src/Portal/Bundle/AppBundle/Resources/assets_src/node_modules
+/src/Portal/Bundle/AppBundle/Resources/public/

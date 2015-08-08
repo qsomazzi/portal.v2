@@ -12,11 +12,11 @@ help:
 
 install:
 	composer install
-	#bower install
+	bower install
 
 update:
 	composer update
-	#bower update
+	bower update
 
 clean:
 	rm -rf app/cache/*
@@ -28,6 +28,8 @@ dev:
 
 assets:
 	if [ ! -f bin/yuicompressor.jar ]; then curl -L https://github.com/yui/yuicompressor/releases/download/v2.4.8/yuicompressor-2.4.8.jar > bin/yuicompressor.jar; fi;
+	cd src/Portal/Bundle/AppBundle/Resources/assets_src && npm install
+	cd src/Portal/Bundle/AppBundle/Resources/assets_src && gulp
 	app/console assets:install --symlink web
 	app/console assetic:dump
 

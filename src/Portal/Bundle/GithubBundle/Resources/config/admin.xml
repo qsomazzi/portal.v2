@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="portal.github.admin.gist" class="Portal\Bundle\GithubBundle\Admin\GistAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Github" label="Gists"/>
+            <argument />
+            <argument>Portal\Bundle\GithubBundle\Entity\Gist</argument>
+            <argument />
+        </service>
+
+        <service id="portal.github.admin.tag" class="Portal\Bundle\GithubBundle\Admin\TagAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Github" label="Tags"/>
+            <argument />
+            <argument>Portal\Bundle\GithubBundle\Entity\Tag</argument>
+            <argument />
+        </service>
+    </services>
+</container>

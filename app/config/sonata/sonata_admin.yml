@@ -1,8 +1,23 @@
 sonata_admin:
     title: Portal
 
+    templates:
+        layout: PortalAppBundle::standard_layout.html.twig
+
+    admin_services:
+        portal.github.admin.tag:
+            templates:
+                form: ['PortalGithubBundle:Form:form_admin_fields.html.twig']
+
     dashboard:
         groups:
+            portal.admin.group.github:
+                label: Github
+                icon:   '<i class="fa fa-github"></i>'
+                items:
+                    - portal.github.admin.gist
+                    - portal.github.admin.tag
+
             sonata.admin.group.classification:
                 label:           sonata_classification
                 label_catalogue: SonataClassificationBundle
@@ -34,9 +49,11 @@ sonata_admin:
             - assetic/sonata_admin_css.css
             - assetic/sonata_formatter_css.css
             - assetic/sonata_jqueryui_css.css
+            - assetic/portal_css.css
 
         javascripts:
             - assetic/sonata_admin_js.js
             - assetic/sonata_jqueryui_js.js
             - assetic/sonata_formatter_js.js
+            - assetic/portal_js.js
             - bundles/sonataformatter/vendor/ckeditor/ckeditor.js

@@ -1,0 +1,14 @@
+{
+    "name": "portal",
+    "authors": [
+        "Quentin SOMAZZI <qsomazzi@gmail.com>"
+    ],
+    "dependencies": {
+        "bootstrap-iconpicker": "1.7"
+    },
+    "license": "MIT",
+    "private": true,
+    "ignore": [
+        "*"
+    ]
+}
