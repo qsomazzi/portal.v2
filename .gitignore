@@ -4,8 +4,6 @@
 /app/cache/*
 /app/config/parameters.yml
 /app/logs/*
-/app/check.php
-/app/SymfonyRequirements.php
 !app/cache/.gitkeep
 !app/logs/.gitkeep
 /app/phpunit.xml

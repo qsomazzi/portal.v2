@@ -2,6 +2,7 @@
 
 namespace Portal\Bundle\AppBundle\Controller;
 
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
@@ -14,13 +15,12 @@ class DefaultController extends Controller
 {
     /**
      * @Route("/", name="homepage")
+     * @Method("GET")
      */
     public function warZoneAction()
     {
-        $github = $this->container->get('github_api');
-
         return $this->render('PortalAppBundle:Default:war_zone.html.twig', [
-            'repositories' => $github->getRepositories(),
+
         ]);
     }
 }

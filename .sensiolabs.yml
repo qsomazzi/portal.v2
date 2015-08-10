@@ -1,0 +1,21 @@
+global_exclude_dirs:
+    - vendor
+    - vendors
+    - test
+    - tests
+    - Tests
+    - lib/vendor
+    - Fixtures
+    - DataFixtures
+
+exclude_patterns:
+    - app/check.php
+    - app/SymfonyRequirements.php
+    - web/app_*.php
+    - node_modules/*
+    - features/*
+    - docs/*
+
+rules:
+    symfony.inject_request_service:
+        enabled: false

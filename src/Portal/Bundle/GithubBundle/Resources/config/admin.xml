@@ -10,6 +10,7 @@
             <argument />
             <argument>Portal\Bundle\GithubBundle\Entity\Gist</argument>
             <argument />
+            <argument type="service" id="github_api" />
         </service>
 
         <service id="portal.github.admin.tag" class="Portal\Bundle\GithubBundle\Admin\TagAdmin">

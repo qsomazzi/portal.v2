@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                  http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="Portal\Bundle\GithubBundle\Entity\Repository"
+            table="github__repository">
+        <id name="id" type="string" column="id">
+            <generator strategy="NONE"/>
+        </id>
+
+        <field name="name"        type="string"  column="name"        length="255" />
+        <field name="description" type="string"  column="description" length="255" />
+        <field name="language"    type="string"  column="language"    length="255" />
+        <field name="public"      type="boolean" column="public" >
+            <options>
+                <option name="default">1</option>
+            </options>
+        </field>
+        <field name="fork"        type="boolean" column="fork" >
+            <options>
+                <option name="default">0</option>
+            </options>
+        </field>
+    </entity>
+</doctrine-mapping>

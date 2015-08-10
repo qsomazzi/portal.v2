@@ -2,7 +2,6 @@
 
 namespace Portal\Bundle\GithubBundle\Command;
 
-use Portal\Bundle\GithubBundle\Entity\GistManager;
 use Portal\Component\Github\GithubApi;
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputInterface;
@@ -40,8 +39,12 @@ class GithubFetchCommand extends ContainerAwareCommand
 
         // Gists
         $output->write('<info>Trying to fetch user\'s gists...</info>');
-        /* @var GistManager $gistManager */
         $container->get('portal.github.manager.gist')->addGists($githubClient->getGists());
+        $output->writeln(' done!');
+
+        // Repositories
+        $output->write('<info>Trying to fetch user\'s repositories...</info>');
+        $container->get('portal.github.manager.repository')->addRepositories($githubClient->getRepositories());
         $output->writeln(' done!');
     }
 }

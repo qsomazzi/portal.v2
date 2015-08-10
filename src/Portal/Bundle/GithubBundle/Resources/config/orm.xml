@@ -9,6 +9,11 @@
             <argument>Portal\Bundle\GithubBundle\Entity\Gist</argument>
             <argument type="service" id="doctrine" />
         </service>
+
+        <service id="portal.github.manager.repository" class="Portal\Bundle\GithubBundle\Entity\RepositoryManager">
+            <argument>Portal\Bundle\GithubBundle\Entity\Repository</argument>
+            <argument type="service" id="doctrine" />
+        </service>
     </services>
 
 </container>

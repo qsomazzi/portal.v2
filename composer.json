@@ -28,17 +28,19 @@
         "incenteev/composer-parameter-handler": "~2.0",
         "cocur/slugify": "~1.2",
         "jms/serializer-bundle": "~0.11",
+        "guzzlehttp/guzzle": "~5.0",
+        "guzzlehttp/guzzle-services": "0.5.*",
 
-        "sonata-project/admin-bundle": "dev-master#a0801f1a9af944a2164530d4be43aade53ab6a64",
-        "sonata-project/doctrine-orm-admin-bundle": "dev-master#4fcec62fab9487c5479519f5d663c3d1d588a10f",
-        "sonata-project/user-bundle": "dev-master#ec09378a100dfe6285562e864c2286ef9104059e",
-        "sonata-project/datagrid-bundle": "dev-master#cc42f2801011d7ebc65edda451a2efa4b4d1fbb9",
-        "sonata-project/page-bundle": "dev-master#c1ba33adb260e00625ec71542a3e8c5c11ca85ad",
-        "sonata-project/block-bundle": "dev-master#9ff5ed97330c59b38d5080e322046f384c36f0e3",
-        "sonata-project/seo-bundle": "dev-master#b7b1237228cf90c86ae0a4b4380506facb70982a",
-        "sonata-project/formatter-bundle": "dev-master#b854ef71eabc0785fadca2d3dd6b477bf63ca4b8",
-        "sonata-project/classification-bundle": "dev-master#06a46292f2651fd5228ec85010944057c6c002d0",
-        "sonata-project/media-bundle": "dev-master#d6cb0062cc4f77393959607c2d95137d5f71c57d"
+        "sonata-project/admin-bundle": "2.4.x-dev",
+        "sonata-project/doctrine-orm-admin-bundle": "2.4.x-dev",
+        "sonata-project/user-bundle": "2.3.x-dev",
+        "sonata-project/datagrid-bundle": "2.2.x-dev",
+        "sonata-project/page-bundle": "2.4.x-dev",
+        "sonata-project/block-bundle": "2.4.x-dev",
+        "sonata-project/seo-bundle": "2.0.x-dev",
+        "sonata-project/formatter-bundle": "2.4.x-dev",
+        "sonata-project/classification-bundle": "2.3.x-dev",
+        "sonata-project/media-bundle": "2.4.x-dev"
 
     },
     "require-dev": {
