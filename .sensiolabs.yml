@@ -19,3 +19,5 @@ exclude_patterns:
 rules:
     symfony.inject_request_service:
         enabled: false
+    symfony.controller.non_action_public_method_in_controller_class:
+        enabled: false

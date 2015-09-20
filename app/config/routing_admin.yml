@@ -8,3 +8,6 @@ _sonata_admin:
 
 sonata_user_admin:
     resource: '@SonataUserBundle/Resources/config/routing/admin_security.xml'
+
+money:
+    resource: "@PortalMoneyBundle/Resources/config/routing.xml"

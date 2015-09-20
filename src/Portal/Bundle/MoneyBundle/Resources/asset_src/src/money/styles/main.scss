@@ -1,0 +1,46 @@
+#money-app {
+  height: 100%;
+
+  .categories {
+    min-height: 100%;
+    display: flex;
+
+    nav {
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+
+      &>div {
+        h3 {
+          cursor: pointer;
+        }
+
+        .children {
+          li.active a:focus{
+            background: none;
+            color: #444;
+          }
+        }
+
+        &.active {
+          border: 2px solid #367fa9;
+        }
+      }
+    }
+
+    .tab-content {
+      padding: 0;
+      display: flex;
+      justify-content: center;
+
+      .tab-pane {
+        width: 100%;
+      }
+    }
+  }
+
+  .list-entry {
+    background: yellow;
+  }
+}

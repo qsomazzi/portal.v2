@@ -48,6 +48,7 @@ class AppKernel extends Kernel
             // Projects bundles
             new Portal\Bundle\AppBundle\PortalAppBundle(),
             new Portal\Bundle\GithubBundle\PortalGithubBundle(),
+            new Portal\Bundle\MoneyBundle\PortalMoneyBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'])) {

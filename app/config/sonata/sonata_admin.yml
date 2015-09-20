@@ -11,6 +11,13 @@ sonata_admin:
 
     dashboard:
         groups:
+            portal.admin.group.money:
+                label: Money
+                icon:  '<i class="fa fa-money"></i>'
+                items:
+                    - route: money_homepage
+                      label: Money
+
             portal.admin.group.github:
                 label: Github
                 icon:   '<i class="fa fa-github"></i>'
