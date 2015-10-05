@@ -4,7 +4,15 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
 
-    <route id="money_homepage" path="/money" methods="GET">
+    <route id="money_app" path="/money" methods="GET">
         <default key="_controller">portal.controller.money:moneyAction</default>
+    </route>
+
+    <route id="money_transactions" path="/money/transactions/{id}" methods="GET">
+        <default key="_controller">portal.controller.money:transactionsAction</default>
+    </route>
+
+    <route id="money_categories" path="/money/categories" methods="GET">
+        <default key="_controller">portal.controller.money:categoriesAction</default>
     </route>
 </routes>

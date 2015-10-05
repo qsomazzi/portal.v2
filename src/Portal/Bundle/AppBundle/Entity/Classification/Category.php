@@ -17,6 +17,14 @@ class Category extends BaseCategory
     protected $id;
 
     /**
+     * {@inheritdoc}
+     */
+    public function __construct()
+    {
+
+    }
+
+    /**
      * Get id.
      *
      * @return int $id

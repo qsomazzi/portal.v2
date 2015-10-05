@@ -18,6 +18,17 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
+        $treeBuilder->root('portal_money')
+            ->children()
+                ->arrayNode('class')
+                    ->addDefaultsIfNotSet()
+                    ->children()
+                        ->scalarNode('transaction')->defaultValue('Portal\\Bundle\\MoneyBundle\\Entity\\Transaction')->end()
+                        ->scalarNode('category')->defaultValue('Portal\\Bundle\\AppBundle\\Entity\\Classification\\Category')->end()
+                    ->end()
+                ->end()
+            ->end()
+        ;
 
         return $treeBuilder;
     }

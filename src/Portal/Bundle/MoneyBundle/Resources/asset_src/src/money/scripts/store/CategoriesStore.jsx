@@ -1,46 +1,44 @@
+import React             from 'react';
 import Reflux            from 'reflux';
 import CategoriesActions from './../action/CategoriesActions';
+import PortalApi         from './../constant/PortalApi';
 
-let data = {
-    categories: [],
-    flatCategories: []
-};
+
 let current = {
-    category: null,
-    child: null
+    category: {
+        name: 'Loading ...'
+    },
+    transactions: [],
+    categories: []
 };
-
 
 const CategoriesStore = Reflux.createStore({
     listenables: CategoriesActions,
 
+    init() {
+        PortalApi.getCategories().then((response) => {
+            current.categories   = response.categories;
+            current.category     = current.categories[0];
+
+            PortalApi.getTransactions(current.category.id).then((response) => {
+                current.transactions = response.transactions;
+
+                this.trigger();
+            });
+        });
+    },
+
     //——————————————————————————————————————————————————————————————————————————
     // Actions handlers
     //——————————————————————————————————————————————————————————————————————————
-    init(categories) {
-        if (categories !== undefined) {
-            categories.map((category, key) => {
-                data.flatCategories.push(category);
-                if (category.children !== undefined) {
-                    category.children.map((child, key) => {
-                        data.flatCategories.push(child);
-                    });
-                }
-            });
-            this.trigger();
+    load(category) {
+        current.category = category;
 
-            current.category = categories[0].id;
-            data.categories  = categories;
+        PortalApi.getTransactions(category.id).then((response) => {
+            current.transactions = response.transactions;
 
             this.trigger();
-        }
-    },
-
-    load(category, isParent) {
-        current.category = isParent ? category.id : category.parent;
-        current.child = isParent ? null : category.id;
-
-        this.trigger();
+        });
     },
 
     //——————————————————————————————————————————————————————————————————————————
@@ -49,14 +47,11 @@ const CategoriesStore = Reflux.createStore({
     currentCategory() {
         return current.category;
     },
-    currentChild() {
-        return current.child;
+    getCategories() {
+        return current.categories;
     },
-    getTreeCategories(categories) {
-        return data.categories;
-    },
-    getFlatCategories() {
-        return data.flatCategories;
+    getTransactions() {
+        return current.transactions;
     }
 });
 

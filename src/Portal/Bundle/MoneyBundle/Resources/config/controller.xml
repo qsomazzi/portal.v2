@@ -8,6 +8,7 @@
             <argument type="service" id="sonata.admin.pool" />
             <argument type="service" id="templating" />
             <argument type="service" id="portal.money.manager.category" />
+            <argument type="service" id="portal.money.manager.transaction" />
         </service>
     </services>
 </container>

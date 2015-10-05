@@ -9,5 +9,11 @@
             <argument type="service" id="doctrine" />
             <argument type="service" id="sonata.classification.manager.context"  />
         </service>
+
+        <service id="portal.money.manager.transaction" class="Portal\Bundle\MoneyBundle\Entity\TransactionManager">
+            <argument>Portal\Bundle\MoneyBundle\Entity\Transaction</argument>
+            <argument type="service" id="doctrine" />
+            <argument />
+        </service>
     </services>
 </container>

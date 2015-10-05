@@ -64,6 +64,7 @@ doctrine:
                 mappings:
                     PortalAppBundle: ~
                     PortalGithubBundle: ~
+                    PortalMoneyBundle: ~
 
 # Swiftmailer Configuration
 swiftmailer:
@@ -77,3 +78,6 @@ swiftmailer:
 portal_github:
     cache: %kernel.root_dir%/cache/github
     token: %github_token%
+
+portal_money:
+

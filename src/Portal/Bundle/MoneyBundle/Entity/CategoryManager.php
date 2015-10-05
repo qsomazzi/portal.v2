@@ -29,7 +29,6 @@ class CategoryManager extends BaseCategoryManager
      * Recursive categories getter
      *
      * @param Collection $categories
-     * @param int        $level
      *
      * @return array
      */
@@ -46,12 +45,9 @@ class CategoryManager extends BaseCategoryManager
             $one->name     = $category->getName();
             $one->slug     = $category->getSlug();
             $one->parent   = $category->getParent()->getId();
+            $one->children = $category->hasChildren() ? $this->getChildrenCategories($category->getChildren()) : [];
 
             $results[] = $one;
-
-            if ($category->hasChildren()) {
-                $one->children = $this->getChildrenCategories($category->getChildren());
-            }
         }
 
         return $results;
